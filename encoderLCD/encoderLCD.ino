@@ -107,29 +107,40 @@ void sentido(){
 
    valor = int(valorBinario);  // conversion de binario a entero
 
-   if( valor > valorAnt){
+   if( valor > valorAnt){  
         if(valor == 3){
           if(valorAnt ==1){
             cantidad--;
           }
           else{
-            cantidad ++;
+            cantidad++;
           }
-        }else{
-          cantidad++;
         }
-        
+        else if( valor == 1){
+          if(valorAnt ==0){
+            cantidad--;
+          }
+        }
+        else{
+          cantidad++;
+        }      
    }
    else{
-        if(valor == 0){
-          if(valorAnt ==1){
+        if(valor == 1){
+          if(valorAnt ==3){
+            cantidad++;
+          }         
+        }
+        else if(valor ==0){
+          if(valorAnt == 1){
             cantidad++;
           }
           else{
-            cantidad --;
+            cantidad--;
           }
-        }else{
-          cantidad--;   
+        }
+        else{
+          cantidad--;
         }
    }
 
@@ -141,7 +152,10 @@ void sentido(){
    lcd.print("               ");
    lcd.setCursor(0, 1);
    lcd.print(cantidad);
-   lcd.print("mm");
+   lcd.print("mm   ");
+
+   lcd.print(valor);
+
 
  
 }
