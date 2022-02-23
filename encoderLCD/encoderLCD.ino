@@ -109,7 +109,7 @@ void sentido(){
 
    if( valor > valorAnt){
         if(valor == 3){
-          if(valorAnt ==0){
+          if(valorAnt ==1){
             cantidad--;
           }
           else{
@@ -122,7 +122,7 @@ void sentido(){
    }
    else{
         if(valor == 0){
-          if(valorAnt ==3){
+          if(valorAnt ==1){
             cantidad++;
           }
           else{
